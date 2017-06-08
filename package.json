@@ -1,0 +1,16 @@
+{
+  "name": "art-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack -w",
+    "server": "http-server ./build -c-1 -o"
+  },
+  "devDependencies": {
+    "art-template": "^4.10.1",
+    "art-template-loader": "^1.4.3",
+    "html-webpack-plugin": "^2.28.0",
+    "webpack": "^2.6.1"
+  }
+}
