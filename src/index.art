@@ -7,6 +7,6 @@
   <title><%= htmlWebpackPlugin.options.title%></title>
 </head>
 <body>
-  <%- include("./header", {user: "hehe2"})%>
+  <%- include("./header", {src: "~@/1.jpg"})%>
 </body>
 </html>

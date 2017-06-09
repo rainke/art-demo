@@ -1,3 +1,1 @@
-<nav>
-  <%- user%>
-</nav>
+<img src="<%src%>" alt=""><img src="~@/1.jpg" alt="">
