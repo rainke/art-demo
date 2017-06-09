@@ -12,8 +12,41 @@ module.exports = function(env) {
       publicPath: '/',
       // libraryTarget: 'umd'
     },
+    resolve:{
+      alias:{
+        '@': path.join(__dirname, 'src')
+      }
+    },
     module:{
       rules:[
+        {
+        exclude: [
+          /\.html$/,
+          /\.(js|jsx)$/,
+          /\.less$/,
+          /\.css$/,
+          /\.json$/,
+          /\.bmp$/,
+          /\.gif$/,
+          /\.jpe?g$/,
+          /\.png$/,
+          /\.ejs$/,
+          /\.svg$/,
+          /\.art$/
+        ],
+        loader: 'file-loader',
+        options: {
+          name: 'assets/[name].[hash:8].[ext]',
+        },
+      },
+      {
+        test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/, /\.svg$/],
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: 'assets/[name].[hash:8].[ext]',
+        },
+      },
         {test: /\.(art)$/, loader:'art-template-loader'},
       ]
     },
